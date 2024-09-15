@@ -1,0 +1,153 @@
+/* Body and background */
+body {
+    background: linear-gradient(135deg, #00c6ff, #0072ff);
+    font-family: 'Poppins', sans-serif;
+}
+
+h1 {
+    text-decoration: underline;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #fff;
+}
+
+/* Effects for the Tic-Tac-Toe board */
+.tic-tac-toe {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 15px;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+}
+
+.tic-tac-toe:hover {
+    transform: scale(1.02);
+}
+
+/* 3D buttons with hover and active effects */
+.tic-tac-toe button {
+    width: 100px;
+    height: 100px;
+    font-size: 2rem;
+    margin: 3px;
+    border-radius: 15px;
+    background: #ffffff;
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+    transform: translateY(0);
+}
+
+.tic-tac-toe button:active {
+    transform: translateY(5px);
+    box-shadow: none;
+}
+
+.tic-tac-toe button:hover {
+    background: linear-gradient(145deg, #e6e6e6, #ffffff);
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+/* Glow effect on active player’s button */
+.tic-tac-toe button.X {
+    box-shadow: 0px 0px 10px 4px rgba(0, 183, 255, 0.6);
+}
+
+.tic-tac-toe button.O {
+    box-shadow: 0px 0px 10px 4px rgba(255, 80, 80, 0.6);
+}
+
+/* Animation for winning cells */
+.tic-tac-toe button.blink {
+    animation: blink 0.8s step-end infinite alternate;
+}
+
+@keyframes blink {
+    50% {
+        background-color: rgba(255, 255, 0, 0.8);
+    }
+}
+
+.tic-tac-toe button.lightblue {
+    background-color: #add8e6;
+}
+
+.tic-tac-toe button.lightgreen {
+    background-color: #90ee90;
+}
+
+.tic-tac-toe button.lightpink {
+    background-color: #ffb6c1;
+}
+
+.tic-tac-toe button.lightpurple {
+    background-color: #dda0dd;
+}
+
+.scoreboard {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(5px);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    transition: all 0.5s ease;
+}
+
+.scoreboard:hover {
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+    transform: translateY(-10px);
+}
+
+.scoreboard h2 {
+    color: #fff;
+}
+
+.table {
+    background-color: transparent;
+    color: #fff;
+    font-size: 1.2rem;
+}
+
+.modal-title {
+    font-weight: bold;
+    color: #000;
+}
+
+.modal-body {
+    font-size: 1.1rem;
+    color: #333;
+}
+
+button {
+    border: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+button.btn-primary {
+    background-color: #007bff;
+    box-shadow: 0 4px 12px rgba(0, 123, 255, 0.2);
+    transition: all 0.3s ease-in-out;
+}
+
+button.btn-primary:hover {
+    background-color: #0056b3;
+    box-shadow: 0 6px 15px rgba(0, 123, 255, 0.3);
+}
+
+button.btn-secondary {
+    background-color: #6c757d;
+    box-shadow: 0 4px 12px rgba(108, 117, 125, 0.2);
+    transition: all 0.3s ease-in-out;
+}
+
+button.btn-secondary:hover {
+    background-color: #5a6268;
+    box-shadow: 0 6px 15px rgba(108, 117, 125, 0.3);
+}
